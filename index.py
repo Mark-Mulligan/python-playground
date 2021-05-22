@@ -1,3 +1,2 @@
-words = 'These are some words'
-print(words)
-print(type(words))
+name = input('Who are you? ')
+print('Welcome', name)
