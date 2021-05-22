@@ -1,2 +1,3 @@
-x = 2
-print(x)
+words = 'These are some words'
+print(words)
+print(type(words))
