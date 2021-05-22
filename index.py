@@ -1,3 +1,4 @@
-userInput = input('Europe floor? ')
-usFloor = int(userInput) + 1
-print('US floor', usFloor)
+userNum = input('Enter a number ')
+userNum = int(userNum)
+if userNum % 2 == 0: print('even number')
+else: print('odd number')
