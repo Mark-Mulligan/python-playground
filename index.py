@@ -1,2 +1,3 @@
-name = input('Who are you? ')
-print('Welcome', name)
+userInput = input('Europe floor? ')
+usFloor = int(userInput) + 1
+print('US floor', usFloor)
