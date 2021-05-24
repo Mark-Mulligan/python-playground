@@ -1,10 +1,10 @@
 
+def findLetters(arr, targetLetter):
+    foundItems = []
+    for item in arr:
+        if item == targetLetter:
+            foundItems.append(item)
+    
+    return foundItems
 
-def getSum(arr): 
-    total = 0
-    for item in arr: 
-        total = total + item
-    return total
-
-
-print(getSum([1, 2, 3]))
+print(findLetters(['a', 'b', 'c', 'a'], 'a'))
