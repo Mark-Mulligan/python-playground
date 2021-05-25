@@ -1,10 +1,9 @@
+def extra_end(str):
+    result = ""
+    ending = str[len(str) - 2:]
+    for index in range(3):
+        result += ending
+    return result
 
-def findLetters(arr, targetLetter):
-    foundItems = []
-    for item in arr:
-        if item == targetLetter:
-            foundItems.append(item)
-    
-    return foundItems
 
-print(findLetters(['a', 'b', 'c', 'a'], 'a'))
+print(extra_end('hello'))
