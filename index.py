@@ -1,9 +1,6 @@
-def extra_end(str):
-    result = ""
-    ending = str[len(str) - 2:]
-    for index in range(3):
-        result += ending
-    return result
+def reverse3(nums):
+    nums.reverse()
+    return nums
 
 
-print(extra_end('hello'))
+print(reverse3([1, 2, 3]))
