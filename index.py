@@ -1,19 +1,11 @@
-def make_dict(str):
-    wordcounts = dict()
-    words = str.split()
+def count_code(str):
+    count = 0
+    for i in range(len(str)):
+        letters = str[i: i+4]
+        if len(letters) == 4 and letters[0] == 'c' and letters[2] == 'd' and letters[3] == 'e':
+            count += 1
 
-    for word in words:
-        lowercase = word.lower()
-        wordcounts[lowercase] = wordcounts.get(lowercase, 0) + 1
-
-    big_word = None
-    big_count = None
-    for word, count in wordcounts.items():
-        if big_count is None or count >= big_count:
-            big_word = word
-            big_count = count
-
-    return (big_word, big_count)
+    return count
 
 
-print(make_dict('Here is a test to make sure that this test is working.'))
+print(count_code('codexxcode'))
