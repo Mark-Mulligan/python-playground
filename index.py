@@ -1,11 +1,24 @@
-def count_code(str):
-    count = 0
-    for i in range(len(str)):
-        letters = str[i: i+4]
-        if len(letters) == 4 and letters[0] == 'c' and letters[2] == 'd' and letters[3] == 'e':
-            count += 1
+import re
 
-    return count
+regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'  
 
+def check(email):   
+    if(re.search(regex,email)):   
+        return True  
+    else:   
+        return False
 
-print(count_code('codexxcode'))
+def return_emails(emails):
+    for i in range(len(emails)):
+        name, email = emails[i].split(' ')
+
+        if check(email[1:-1]):
+          print(name, email)
+
+return_emails(['dheeraj <dheeraj-234@gmail.com>',
+'crap <itsallcrap>',
+'harsh <harsh_1234@rediff.in>',
+'kumal <kunal_shin@iop.az>',
+'mattp <matt23@@india.in>',
+'harsh <.harsh_1234@rediff.in>',
+'harsh <-harsh_1234@rediff.in>'])
